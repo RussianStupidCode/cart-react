@@ -20,19 +20,22 @@ const Counter = (props) => {
 
       <button
         className="btn btn-primary btn-sm m-2"
-        onClick={props.onIncrement}
+        onClick={() => props.onIncrement(props.id)}
       >
         +
       </button>
 
       <button
         className="btn btn-primary btn-sm m-2"
-        onClick={props.onDecrement}
+        onClick={() => props.onDecrement(props.id)}
       >
         -
       </button>
 
-      <button className="btn btn-danger btn-sm m-2" onClick={props.onDelete}>
+      <button
+        className="btn btn-danger btn-sm m-2"
+        onClick={() => props.onDelete(props.id)}
+      >
         Delete
       </button>
     </div>
